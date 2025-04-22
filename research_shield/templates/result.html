@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    {% if status == 'duplicate' %}
+        <h3 style="color:red;">Duplicate Found ({{ similarity }}%)</h3>
+        <p><strong>Matched Project:</strong></p>
+        <p><strong>Title:</strong> {{ match[0] }}</p>
+        <p><strong>Abstract:</strong> {{ match[1] }}</p>
+    {% else %}
+        <h3 style="color:green;">Project Submitted Successfully!</h3>
+        <p>Similarity with existing projects: {{ similarity }}%</p>
+    {% endif %}
+    <br><a href="/">Go Back</a>
+</body>
+</html>
